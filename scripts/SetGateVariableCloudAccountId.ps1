@@ -12,7 +12,7 @@ param (
 # Set the Gate variable if the file exists
 Write-Host "##vso[task.setvariable variable=IsEnabled;isOutput=true]False"
 # $path = "$($env:System_DefaultWorkingDirectory)/s/_BuildCloudAccountIdArtefacts/aws/$BaseImageName.txt"
-$path = "$($env:Pipeline_Workspace)/s/_BuildCloudAccountIdArtefacts/aws/$BaseImageName.txt"
+$path = "$($env:Pipeline_Workspace)/_BuildCloudAccountIdArtefacts/aws/$BaseImageName.txt"
 Write-Host "Using $path"
 if (Test-Path $path) {
     try{
